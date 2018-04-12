@@ -1,0 +1,202 @@
+\documentclass[a4paper,11pt]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage[final]{pdfpages}
+\usepackage[headings]{fullpage}
+\usepackage{url}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{changepage}
+
+\usepackage{textcomp}
+
+\def\phantomsection{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Define title section with title, author, affiliation, time & abstract
+\long\def\title#1#2#3#4#5#6{
+\myheading{Summer School in Bioinformatics \& NGS Data Analysis}
+\newpage
+\refstepcounter{section}
+\addcontentsline{toc}{subsection}{#3: #2}
+~
+
+\bigskip
+\begin{center}
+{\Large\bf #2\\}
+
+\bigskip
+{\Large #3\\}
+\medskip
+{ #4}
+
+\medskip
+{\large\bf #5}
+\end{center}
+\bigskip
+\par\noindent
+#6
+\newpage
+\myheading{#2}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Affiliations
+\def\iimcb{International Institute of Molecular and Cell Biology in Warsaw}
+\def\matfyz{Faculty of Mathematics, Physics and Informatics, Comenius University in Bratislava}
+\def\masaryk{Department of Information Technologies, Masaryk University in Brno}
+\def\szeged{Institute of Genetics, Hungarian Academy of Sciences in Szeged}
+\def\crg{Centre for Genomic Regulation, Barcelona}
+\def\wut{Warsaw University of Technology}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Start document
+\begin{document}
+
+%%% page head - logo removed
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RE,LO]{\vglue-2cm\includegraphics[width=2.5cm]{logs/logo-horizontal.png}}
+\fancyhead[RO,LE]{\thepage}
+\fancyfoot[C]{}
+\def\myheading#1{\fancyhead[C]{#1}}
+\myheading{Summer School in Bioinformatics \& NGS Data Analysis}
+
+\newpage
+\thispagestyle{empty}
+\begin{center}
+
+\includegraphics[width=0.6\textwidth]{logs/logo.png}
+
+~\vfill
+\large
+
+{\LARGE\bf ABSTRACT BOOK\\[1cm]
+Summer School in Bioinformatics\\
+\& NGS Data Analysis\\}
+
+\bigskip
+CBiES, Jachranka, Poland\\
+September 10-17, 2017\\
+
+~\vfill
+{\bf 
+  \#NGSchool2017\\
+  \url{https://ngschool.eu/2017}\\
+}
+\end{center}
+
+%%% cover back
+\newpage
+\thispagestyle{empty}
+\paragraph{Organized by} 
+\begin{itemize}
+\item \iimcb
+\item \matfyz
+\item \masaryk
+\item \szeged
+\end{itemize}
+
+\paragraph{Contributions}
+\begin{itemize}
+\item Leszek Pryszcz: main organiser, \url{https://ngschool.eu/}, Lecture notes and more
+\item Organisation \& scientific committee: Bro\v{n}a Brejov\'a, German Demidov, Alina Frolova,
+  Katarzyna Kędzierska, Bogumił Konopka, Łukasz Kiełpi\'nski \& Tom\'a\v{s} Vina\v{r}
+\item IIMCB Admin, Grant, Finance \& PR Units
+\item Centrum Badań i Edukacji Statystycznej GUS: accommodation \& boarding
+\item PTBi: help with obtaining the grant from Polish Ministry of Science and Higher Education
+\item Ewa Ramotowska \#NGSchool logo
+\end{itemize}
+
+~\vfill
+\paragraph{Supporters}
+This activity is financially supported by grants from {\bf International Visegrad Fund} (Visegrad Grant No. 21710381),
+{\bf Polish Ministry of Science and Higher Education} (842/P-DUN/2017) 
+and {\bf \iimcb}. 
+
+\smallskip
+\begin{center}
+\includegraphics[width=0.6\textwidth]{logs/ivf.jpg}
+\includegraphics[width=0.22\textwidth]{logs/iimcb.png}
+\includegraphics[width=0.5\textwidth]{logs/mnisw.png}
+\end{center}
+
+\smallskip 
+\paragraph{Copyright}
+Materials in this book are reproduced as an internal material for
+participants of the Summer School in Bioinformatics \& NGS Data Analysis (\#NGSchool2017).
+If you wish to use any of the materials included here for other purposes,
+please ask individual contributors for the permission. 
+
+
+%%% TOC
+\tableofcontents
+
+%%% Programme
+\newpage
+\section*{Programme}
+\addcontentsline{toc}{section}{Programme}
+%\textasciitilde
+We’ll have {\bf morning (9-13)} and {\bf afternoon (14-18)} sessions with coffee breaks around 11:00 and 16:00.
+In the evenings, we'll have lecture-only sessions, shot-talks, discussions and some more relaxed activities. 
+Breakfast will be served from 8:00, lunch at 13:00 and dinner around 19:00. 
+Workshops last 4 hours and consists of theoretical introduction and practical exercises. \\
+
+\smallskip
+\begin{tabular}{ r >{\bfseries}c >{\itshape}c }
+& Day 0: Sunday	\\ \hline
+15:00 & Introduction to Bioinformatics \& NGS & Bro\v{n}a Brejov\'a \& Tom\'a\v{s} Vina\v{r} \\
+18:00 & Welcome, dinner \& Shot talks \#1 & Leszek Pryszcz \\
+\\
+& Day1: Monday \\ \hline
+9:00 & Data visualisation & Przemysław Biecek \\
+14:00 & Molecular data integration & Jacek Marzec \\
+20:00 & Shot talks \#2 & Leszek Pryszcz \\
+\\
+& Day2: Tuesday \\ \hline
+9:00 & Workflows \& pipelines & Alina Frolova \\
+14:00 & Genome \& transcriptome assembly & Andrey Prjibelski \\
+20:00 & Beta \& Bit games & Przemysław Biecek \\
+\\
+& Day3: Wednesday \\ \hline
+9:00 & Detection of structural variations & Tomasz Gambin \\
+14:00 & Introduction to Statistics & German Demidov \\
+14:00 & RNA Structure Probing & Łukasz Kiełpi\'nski \\
+17:30 & Open science - discussion & Paweł Szczęsny \\
+20:00 & Chilling evening: BBQ \#1 & \\
+\\
+& Day4: Thursday \\ \hline
+9:00 & Functional genome annotation & Marina Marcet-Houben \\
+14:00 & ChIP-seq & Aliaksei Holik \\
+20:00 & Team-working & Panagiotis Theodorakis \\
+
+\\
+& Day5: Friday \\ \hline
+9:00 & Single-cell RNA-seq analysis & Davis McCarthy \\
+14:00 & Differential expression analysis & Davis McCarthy \\
+20:00 & Genome structure \& function & Noam Kaplan \\
+\\
+& Day6: Saturday \\ \hline
+9:00 & Single-cell Hi-C data analysis & Aleksandra Galitsyna \\
+%9:00 & Epigenetic Profiling & Russell Hamilton \\
+14:00 & ATAC-seq & Katarzyna Kędzierska \\
+14:00 & Microbial genomics & Adam Witney \\
+20:00 & Chilling evening BBQ \#2 & \\
+\\
+& Day7: Sunday \\ \hline
+10:00 & Recap \& farewell & Leszek Pryszcz\\
+\end{tabular}
+
+
+%%%%%%%% ABSTRACTS %%%%%%%%%%%%
+\newpage
+\refstepcounter{section}
+\addcontentsline{toc}{section}{Abstracts}
+
+\input{abstracts.tex}
+
+\end{document}
