@@ -1,5 +1,5 @@
 # abstracts
-Repository to create abstract book from responses in spreadsheet / google doc .xlsx
+Repository to create abstract book from responses in spreadsheet (.xlsx) or google forms.
 The process is described in details at https://bioinfoexpert.com/?p=769
 
 # Dependencies
